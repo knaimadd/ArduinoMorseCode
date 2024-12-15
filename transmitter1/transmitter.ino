@@ -31,6 +31,14 @@ void loop() {
     readWord();
     Serial.println("Calibration ended succesfully!");
   }
+  else if (word == "!") { // reseting the output (sending very long signal)
+    Serial.println("Reset");
+    tone(soundPin, frequency);
+    digitalWrite(diodePin, 1);
+    delay(10*unit);
+    noTone(soundPin);
+    digitalWrite(diodePin, 0);
+  }
   else {
     wordToSound(word, 400); // translating word from serial monitor to signal on diode and speaker
   }
