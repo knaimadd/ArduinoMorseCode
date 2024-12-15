@@ -66,7 +66,7 @@ void loop() {
     else if (onState == 15 || onState == 38){
       Serial.println("none");
     }
-    else if (onState == 100) { // reset sentance if held long enough
+    else if (onState == 96) { // reset sentance if held long enough
       morse = "";
       sentance = "";
       lcdRowLen = 0;
