@@ -33,7 +33,7 @@ void loop() {
   }
   else if (word == "!") { // reseting the output (sending very long signal)
     Serial.println("Reset");
-    tone(soundPin, frequency);
+    tone(soundPin, 400);
     digitalWrite(diodePin, 1);
     delay(10*unit);
     noTone(soundPin);
